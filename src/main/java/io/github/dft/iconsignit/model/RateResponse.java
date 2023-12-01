@@ -1,4 +1,4 @@
-package io.github.dft.kis.model;
+package io.github.dft.iconsignit.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

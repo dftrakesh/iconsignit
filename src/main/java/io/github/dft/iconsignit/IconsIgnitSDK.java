@@ -1,4 +1,4 @@
-package io.github.dft.kis;
+package io.github.dft.iconsignit;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
@@ -9,16 +9,18 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.dft.kis.constantcode.ConstantCodes.*;
+import static io.github.dft.iconsignit.constantcode.ConstantCodes.*;
 
 public class IconsIgnitSDK {
 
-    private final ObjectMapper objectMapper;
     protected HttpClient client;
+    private final String baseURL;
+    private final ObjectMapper objectMapper;
 
-    public IconsIgnitSDK() {
+    public IconsIgnitSDK(String clientDomain) {
         client = HttpClient.newHttpClient();
         this.objectMapper = new ObjectMapper();
+        this.baseURL = String.format(BASE_ENDPOINT, clientDomain);
     }
 
     @SneakyThrows
@@ -44,7 +46,7 @@ public class IconsIgnitSDK {
     @SneakyThrows
     protected URI baseUrl(String path) {
         return new URI(HTTPS +
-            BASE_ENDPOINT +
+            baseURL +
             path);
     }
 
