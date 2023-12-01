@@ -1,7 +1,6 @@
 package io.github.dft.kis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.dft.kis.model.AccessCredential;
 import lombok.SneakyThrows;
 
 import java.net.URI;
@@ -14,14 +13,12 @@ import static io.github.dft.kis.constantcode.ConstantCodes.*;
 
 public class IconsIgnitSDK {
 
-    protected HttpClient client;
     private final ObjectMapper objectMapper;
-    protected AccessCredential accessCredential;
+    protected HttpClient client;
 
-    public IconsIgnitSDK(AccessCredential accessCredential) {
+    public IconsIgnitSDK() {
         client = HttpClient.newHttpClient();
         this.objectMapper = new ObjectMapper();
-        this.accessCredential = accessCredential;
     }
 
     @SneakyThrows
