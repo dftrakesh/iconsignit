@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>iconsignit</name>
-    <description>iconsignit API using JDK 11</description>
+    <description>Iconsignit API using JDK 11</description>
     <url>https://github.com/dftrakesh/iconsignit</url>
 
     <licenses>
