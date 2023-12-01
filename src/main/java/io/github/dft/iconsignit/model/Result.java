@@ -12,21 +12,21 @@ import lombok.Data;
 public class Result {
     private String carrierNm;
     private String serviceNm;
+    private String totWeight;
+    private String senderZone;
 
     @JsonProperty("QuoteRateID")
     private String quoteRateID;
-    private String senderZone;
     private String receiverZone;
     private String senderSuburb;
     private String senderPostcode;
     private String receiverSuburb;
     private String receiverPostcode;
-    private String totWeight;
-    private Integer totQty;
     private String totVolume;
 
     @JsonProperty("ETA_DAY")
     private Integer etaDay;
+    private Integer totQty;
     private String fees;
     private String frightCharge;
 

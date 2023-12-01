@@ -10,8 +10,8 @@ public class Item {
     private String itemCode;
     private String itemDesc;
     private Integer itemQty;
-    private Double itemLength;
     private Double itemWidth;
+    private Double itemLength;
     private Double itemHeight;
     private Double itemWeight;
     private Integer itemPalletised;

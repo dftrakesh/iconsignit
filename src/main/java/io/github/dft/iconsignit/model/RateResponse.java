@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RateResponse {
-    private Boolean status;
     private String error;
+    private Boolean status;
     private List<Result> result;
 }

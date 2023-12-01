@@ -12,12 +12,12 @@ public class RateRequest {
     public String apiUrl;
     public String apiToken;
     public String locationTown;
-    public String locationPostcode;
     public String deliveryTown;
+    public Integer isTailgate;
+    public Integer isResidential;
+    public String locationPostcode;
     public String deliveryPostcode;
     public Integer isDangerousGoods;
-    public Integer isResidential;
     public Integer isSenderResidential;
-    public Integer isTailgate;
     public List<Item> items;
 }
